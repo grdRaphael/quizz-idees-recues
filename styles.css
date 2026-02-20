@@ -5,12 +5,16 @@
     font-style: normal;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'inter_regular', sans-serif;
-    box-sizing: border-box;
     background: linear-gradient(180deg, rgb(47 124 129), rgb(36 96 101));
     color: white;
     min-height: 100vh;
