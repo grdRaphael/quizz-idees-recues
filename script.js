@@ -3,29 +3,28 @@ let listeQuestions = [
     {
         question: "Sortir les cheveux mouillés quand il fait froid rend malade",
         reponse: false,
-        explication: "T'es pas malade parce que t'as les cheveux trempés, t'es malade parce que t'as serré la main d'un gamin qui tousse comme un vieux diesel. Les virus s'en battent les couilles du froid. Source : revue The Lancet 2015 + meta-analyse Cochrane 2020 – zéro lien température/humidité et rhume. T'as juste un système immunitaire de merde, assume.",
-        explicationMauvaiseReponse: "Non mais sérieux, tu crois vraiment que tes cheveux mouillés vont te filer la grippe ? T'es con ou t'as juste besoin d'une excuse pour pas sortir ?"
+        explication: "Ah oui, parce que tes cheveux en mode serpillière glacée vont magiquement invoquer un virus du rhume ? Pathétique. Le rhume vient de virus (rhinovirus et compagnie), pas d'une petite baisse de température locale. Des décennies d'études, dont des revues par Mayo Clinic, CDC et revues systématiques, montrent zéro lien causal entre sortir mouillé et tomber malade – c'est juste une excuse pour ta flemme hivernale. Assume que ton nez qui coule vient de tes contacts avec des pestiférés, pas de ta coiffure ratée.",
+        explicationMauvaiseReponse: "Tu crois vraiment que Mère Nature punit les cheveux humides ? C'est adorablement médiéval. Va te sécher la tête… et les neurones."
     },
     {
         question: "Craquer ses doigts provoque de l'arthrite",
         reponse: false,
-        explication: "Ton oncle qui te gueule 'arrête tu vas te péter les articulations' depuis 30 ans ? Il ment. Une étude de 1998 (Donald Unger, le mec qui s'est craqué UNE SEULE main pendant 50 ans) + méta-analyse Arthritis & Rheumatology 2011 : zéro corrélation. T'as juste l'air d'un débile qui fait du bruit avec ses doigts pour impressionner les filles. Bravo, champion.",
-        explicationMauvaiseReponse: "Ah ouais, t'as cru que c'était comme un sort vaudou ? Va plutôt craquer ton cerveau, ça te ferait du bien."
+        explication: "Ton oncle qui te menace depuis l'école primaire avec cette ânerie mérite une médaille pour persévérance dans la bêtise. L'expérience la plus célèbre ? Donald Unger qui s'est craqué une main pendant 50 ans et l'autre jamais : zéro arthrite en plus (Arthritis & Rheumatology, 1998). Des revues et études ultérieures confirment : aucun lien prouvé. Le seul dégât, c'est le bruit agaçant et ta réputation de gamin qui cherche l'attention. Bravo pour cette contribution zéro à la science.",
+        explicationMauvaiseReponse: "C'est ça, continue de croire que tes articulations vont se venger comme dans un film de kung-fu. Craque plutôt tes certitudes moisies."
     },
     {
         question: "Il est possible d’attraper un coup de soleil par temps froid",
         reponse: true,
-        explication: "Même si t'as la tronche bleue de froid, les UV te niquent la peau pareil. Réflexion sur la neige = +80% d'UV, étude Journal of Investigative Dermatology 2017 + NASA 2022 (oui, ils mesurent ça avec des satellites, pas avec une vieille loupe). T'as juste l'air d'un vampire qui prend des bains de soleil en slip de ski. Ridicule.",
-        explicationMauvaiseReponse: "T'as jamais entendu parler des crèmes solaires en hiver ? T'es pas un ours polaire, t'es un humain qui va finir avec une tête de tomate surgelée."
+        explication: "Oui, même avec des glaçons dans la barbe et un bonnet ridicule, les UV te grillent la peau sans pitié. La neige réfléchit jusqu'à 80 % des rayons UV (Skin Cancer Foundation, études NIH et NASA), doublant presque l'exposition – et en altitude c'est pire. Les UVB baissent un peu, mais les UVA restent costauds toute l'année. Croire que le froid annule le soleil, c'est comme penser que ton pull protège des microbes. Mets de la crème, clown des neiges, ou prépare-toi à ressembler à une langouste ébouillantée en juillet.",
+        explicationMauvaiseReponse: "T'as oublié la crème solaire parce que 'il fait -5°C' ? Brillant. Profite bien de ton futur cancer de la peau vintage hiver 2026."
     },
     {
         question: "La Terre est ronde",
         reponse: true,
-        explication: "Depuis qu'Ératosthène a mesuré l'ombre d'un bâton en 240 av. J.-C. et calculé le rayon à 2% près, on sait. Photos satellites, GPS, gravité, tout confirme. Les platistes ? Juste des losers qui ont raté leurs cours de 5e et qui se branlent sur des vidéos YouTube filmées avec un Nokia 3310. Source : NASA, ESA, et tous les satellites qui te trackent pendant que tu pleures dans ton lit.",
-        explicationMauvaiseReponse: "T'es vraiment du genre à croire que la Terre est plate parce que 'l'eau reste droite' ? Va voir un psy, ou au moins un globe terrestre, espèce de troglodyte."
+        explication: "Depuis 240 av. J.-C., Ératosthène a mesuré la circonférence avec un bâton et des ombres, précision bluffante à ~2 %. Ajoute les photos satellites, le GPS, la gravité, les éclipses lunaires et les orbites : tout hurle 'sphère'. Les platistes d'aujourd'hui ? Des victimes collatérales de YouTube et d'un QI en chute libre. NASA, ESA et des siècles de physique observationnelle confirment : la Terre est ronde, point barre. Continuer à nier, c'est juste pathétique à l'ère des smartphones.",
+        explicationMauvaiseReponse: "Ah ouais, 'l'eau est plate donc la Terre aussi' ? Va acheter un globe et arrête de te ridiculiser, dinosaure intellectuel."
     }
 ];
-
 
 let zoneQuestion = document.querySelector('.zoneQuestion span')
 let zoneExplication = document.querySelector('.zoneExplication')
