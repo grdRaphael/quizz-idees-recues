@@ -1,0 +1,122 @@
+@font-face {
+    font-family: "inter_regular";
+    src: url("./fonts/inter_regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'inter_regular';
+    box-sizing: border-box;
+    background-color: rgb(47 124 129);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+header {
+    background-color: rgb(71 137 142);
+    padding: 10px 0;
+
+
+}
+
+.zoneTitre {
+    margin-top: 50px;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 900;
+    /*border-bottom: solid 1px rgb(88, 136, 141);*/
+    padding-bottom: 20px;
+
+
+}
+
+.zoneJeu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(71 137 142);
+    border-radius: 16px;
+    width: 50%;
+    margin: 50px auto;
+}
+
+.zoneQuestion {
+    padding: 20px;
+    margin: 30px 40px;
+    background-color: rgb(61 117 121);
+    border-radius: 16px;
+}
+
+.formulaire {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.buttonStyle {
+    width: 250px;
+    font-size: 40px;
+    padding: 12px 14px;
+    background-color: white;
+    color: rgb(69, 123, 128);
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.buttonStyle:hover {
+    border-color: white;
+    background-color: rgb(42 114 119);
+    color: white;
+}
+
+.bouttonSuivant {
+    display: block;
+    margin: 10px auto;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.zoneScore {
+    padding: 20px;
+}
+
+.explication {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    border-style: dotted;
+    border-radius: 16px;
+    background-color: rgb(42 114 119);
+}
+
+footer {
+
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 30px;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: rgb(71 137 142);
+    text-align: center;
+}
