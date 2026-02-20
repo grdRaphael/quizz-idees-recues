@@ -22,7 +22,9 @@ let listeQuestions = [
     }
 ]
 
+
 let zoneQuestion = document.querySelector('.zoneQuestion span')
+let zoneExplication = document.querySelector('.zoneExplication')
 let buttonTrue = document.getElementById('buttonTrue')
 let buttonFalse = document.getElementById('buttonFalse')
 let bouttonSuivant = document.querySelector('.bouttonSuivant')
@@ -34,9 +36,14 @@ function afficherQuestion() {
         i++
         zoneQuestion.textContent = listeQuestions[i].question
         bouttonSuivant.classList.add('hidden')
+        zoneExplication.classList.add('hidden')
+        // Faire apparaitre les boutons vrai / faux
+        buttonFalse.classList.remove('hidden')
+        buttonTrue.classList.remove('hidden')
     })
 }
 
+zoneExplication.classList.add('hidden')
 zoneQuestion.textContent = listeQuestions[i].question
 afficherQuestion()
 bouttonSuivant.classList.add('hidden')
@@ -51,7 +58,11 @@ buttonFalse.addEventListener('click', () => {
     verifierReponse(responseUser)
     afficherExplication()
     bouttonSuivant.classList.remove('hidden')
-    
+    zoneExplication.classList.remove('hidden')
+    //Cacher les boutons vrai et faux :
+    buttonFalse.classList.add('hidden')
+    buttonTrue.classList.add('hidden')
+
 })
 
 buttonTrue.addEventListener('click', () => {
@@ -59,9 +70,14 @@ buttonTrue.addEventListener('click', () => {
     verifierReponse(responseUser)
     afficherExplication()
     bouttonSuivant.classList.remove('hidden')
+    zoneExplication.classList.remove('hidden')
+    //Cacher les boutons vrai et faux :
+    buttonFalse.classList.add('hidden')
+    buttonTrue.classList.add('hidden')
+
 })
 
-let explication = document.querySelector(".explication p")
+let explication = document.querySelector(".zoneExplication p")
 function afficherExplication() {
     if (responseUser === listeQuestions[i].reponse) {
         explication.textContent = `Bonne réponse !
