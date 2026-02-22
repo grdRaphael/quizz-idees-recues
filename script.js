@@ -31,7 +31,10 @@ let zoneExplication = document.querySelector('.zoneExplication')
 let buttonTrue = document.getElementById('buttonTrue')
 let buttonFalse = document.getElementById('buttonFalse')
 let bouttonSuivant = document.querySelector('.bouttonSuivant')
+let zoneScore = document.querySelector(".zoneScore")
+let resultat = document.querySelector('.resultat')
 let i = 0
+let score = 0
 
 // Affiche la question suivant apres chaque clique sur le boutton suivant
 function afficherQuestion() {
@@ -83,10 +86,12 @@ buttonTrue.addEventListener('click', () => {
 let explication = document.querySelector(".zoneExplication p")
 function afficherExplication() {
     if (responseUser === listeQuestions[i].reponse) {
-        explication.textContent = `Bonne réponse !
-    ${listeQuestions[i].explication}`
+        resultat.textContent = 'Bonne réponse !'
+        score++
+        explication.textContent = listeQuestions[i].explication
+        zoneScore.textContent = `Votre score : ${score}`
     } else {
-        explication.textContent = `Mauvaise réponse !
-    ${listeQuestions[i].explication}`
+        explication.textContent = listeQuestions[i].explication
+        resultat.textContent = "Mauvaise réponse !"
     }
 }
