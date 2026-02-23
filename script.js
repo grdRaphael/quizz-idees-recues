@@ -33,23 +33,38 @@ let buttonFalse = document.getElementById('buttonFalse')
 let bouttonSuivant = document.querySelector('.bouttonSuivant')
 let zoneScore = document.querySelector(".zoneScore")
 let resultat = document.querySelector('.resultat')
+let zoneJeu = document.querySelector('.zoneJeu')
 let i = 0
 let score = 0
+
+
 
 // Affiche la question suivant apres chaque clique sur le boutton suivant
 function afficherQuestion() {
     bouttonSuivant.addEventListener('click', () => {
         i++
-        zoneQuestion.textContent = listeQuestions[i].question
-        bouttonSuivant.classList.add('hidden')
-        zoneExplication.classList.add('hidden')
-        // Faire apparaitre les boutons vrai / faux
-        buttonFalse.classList.remove('hidden')
-        buttonTrue.classList.remove('hidden')
+      
+
+        if (i >= listeQuestions.length) {
+            zoneQuestion.textContent = "Vous avez teminée ce quizz"
+            bouttonSuivant.classList.add('hidden')
+            zoneExplication.classList.remove('is-open')
+            buttonFalse.classList.add('hidden')
+            buttonTrue.classList.add('hidden')
+        } else {
+            zoneQuestion.textContent = listeQuestions[i].question
+            bouttonSuivant.classList.add('hidden')
+            zoneExplication.classList.remove('is-open')
+            // Faire apparaitre les boutons vrai / faux
+            buttonFalse.classList.remove('hidden')
+            buttonTrue.classList.remove('hidden')
+            console.log(listeQuestions[i].question)
+        }
     })
 }
 
-zoneExplication.classList.add('hidden')
+zoneScore.textContent = `Votre score : ${score}`
+zoneExplication.classList.remove('is-open')
 zoneQuestion.textContent = listeQuestions[i].question
 afficherQuestion()
 bouttonSuivant.classList.add('hidden')
@@ -60,27 +75,39 @@ function verifierReponse() {
 }
 
 buttonFalse.addEventListener('click', () => {
+    
     responseUser = false
     verifierReponse(responseUser)
     afficherExplication()
     bouttonSuivant.classList.remove('hidden')
-    zoneExplication.classList.remove('hidden')
+    zoneExplication.classList.add('is-open')
+    //zoneExplication.classList.remove('hidden')
     //Cacher les boutons vrai et faux :
     buttonFalse.classList.add('hidden')
     buttonTrue.classList.add('hidden')
-
+    zoneJeu.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
 })
 
+
+
 buttonTrue.addEventListener('click', () => {
+
     responseUser = true
     verifierReponse(responseUser)
     afficherExplication()
     bouttonSuivant.classList.remove('hidden')
-    zoneExplication.classList.remove('hidden')
+    zoneExplication.classList.add('is-open')
+    //zoneExplication.classList.remove('hidden')
     //Cacher les boutons vrai et faux :
     buttonFalse.classList.add('hidden')
     buttonTrue.classList.add('hidden')
-
+    zoneJeu.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
 })
 
 let explication = document.querySelector(".zoneExplication p")
@@ -93,5 +120,6 @@ function afficherExplication() {
     } else {
         explication.textContent = listeQuestions[i].explication
         resultat.textContent = "Mauvaise réponse !"
+        zoneScore.textContent = `Votre score : ${score}`
     }
 }

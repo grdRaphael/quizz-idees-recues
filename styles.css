@@ -120,6 +120,17 @@ h1 {
     border-radius: 16px;
     background-color: rgb(42 114 119);
     line-height: 1.6;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition: max-height 250ms ease, opacity 250ms ease, transform 250ms ease;
+}
+/* pour afficher :*/
+.is-open {
+  max-height: 500px; /* assez grand pour contenir ton texte */
+  opacity: 1;
+  transform: translateY(0);
 }
 
 footer {
